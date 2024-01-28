@@ -1,4 +1,29 @@
 <script lang="ts">
+  interface CheckoutResponse {
+    // card: any
+    // created: number
+    id: string
+    // livemode: boolean
+    // object: string
+    // used: boolean
+  }
+
+  interface CheckoutErrorResponse {
+    // code: string
+    message: string
+    // status: number // http (response) status code
+    // type: string
+  }
+
+  interface PayjpCheckoutPayload {
+    token: string
+  }
+
+  interface PayjpCheckoutErrorPayload {
+    statusCode: number
+    message: string
+  }
+
   let {
     dataKey,
     dataPartial,
@@ -57,13 +82,13 @@
     };
   });
 
-  const onCreateToken = (response: any) => {
-    const payload: any = { token: response.id };
+  const onCreateToken = (response: CheckoutResponse) => {
+    const payload: PayjpCheckoutPayload = { token: response.id };
     onCreatedHandler(payload);
   };
 
-  const onCreateTokenFailed = (statusCode: any, errorResponse: any) => {
-    const payload = { message: errorResponse.message };
+  const onCreateTokenFailed = (statusCode: number, errorResponse: CheckoutErrorResponse) => {
+    const payload: PayjpCheckoutErrorPayload = { statusCode, message: errorResponse.message };
     onFailedHandler(payload);
   };
 </script>
