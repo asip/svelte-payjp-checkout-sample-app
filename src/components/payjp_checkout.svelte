@@ -46,8 +46,8 @@
     dataLang?: string;
     dataNamePlaceholder?: string;
     dataTenant?: string;
-    onCreatedHandler: (payload: any) => void;
-    onFailedHandler: (payload: any) => void;
+    onCreatedHandler: (payload: PayjpCheckoutPayload) => void;
+    onFailedHandler: (payload: PayjpCheckoutErrorPayload) => void;
   }>();
 
   let script: HTMLScriptElement | null | undefined = null;
