@@ -10,10 +10,10 @@ devDependencies:
     version: 3.1.1(@sveltejs/kit@2.5.0)
   '@sveltejs/kit':
     specifier: ^2.5.0
-    version: 2.5.0(@sveltejs/vite-plugin-svelte@3.0.2)(svelte@5.0.0-next.48)(vite@5.0.12)
+    version: 2.5.0(@sveltejs/vite-plugin-svelte@3.0.2)(svelte@5.0.0-next.51)(vite@5.0.12)
   '@sveltejs/vite-plugin-svelte':
     specifier: ^3.0.2
-    version: 3.0.2(svelte@5.0.0-next.48)(vite@5.0.12)
+    version: 3.0.2(svelte@5.0.0-next.51)(vite@5.0.12)
   '@types/eslint':
     specifier: 8.56.2
     version: 8.56.2
