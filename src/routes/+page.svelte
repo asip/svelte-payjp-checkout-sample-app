@@ -5,12 +5,12 @@
   const dataKey = PUBLIC_PAYJP_DATA_KEY;
 
   const onCreated = (payload: any) => {
-    console.log(payload.token)
-  }
+    console.log(payload.token);
+  };
 
   const onFailed = (payload: any) => {
-    console.log(payload.message)
-  }
+    console.log(payload.message);
+  };
 </script>
 
 <PayjpCheckout

@@ -2,7 +2,7 @@
   interface CheckoutResponse {
     // card: any
     // created: number
-    id: string
+    id: string;
     // livemode: boolean
     // object: string
     // used: boolean
@@ -10,18 +10,18 @@
 
   interface CheckoutErrorResponse {
     // code: string
-    message: string
+    message: string;
     // status: number // http (response) status code
     // type: string
   }
 
   interface PayjpCheckoutPayload {
-    token: string
+    token: string;
   }
 
   interface PayjpCheckoutErrorPayload {
-    statusCode: number
-    message: string
+    statusCode: number;
+    message: string;
   }
 
   let {
